@@ -2,17 +2,51 @@ import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button, Image } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+import StartAssesment from './StartAssesment';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const logoImage = require('./DingoLogo.jpg');
+const Stack = createNativeStackNavigator();
 
+
+function HomeScreen({ navigation }) {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.headerText}>Your Culinary Journey Starts Here</Text>
+      <Image source={logoImage} style={styles.logo}/>
+      <Button  
+        title = "Start Assesment"
+        onPress={() => navigation.navigate('StartAssesment')}
+      />
+      <StatusBar style="auto" />
+
+    </View>
+  );
+}
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.headerText}>Your Culinary Journet Starts Here</Text>
-      <Image source={logoImage} style={styles.logo}/>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name = "Home"
+          component={HomeScreen}
+          options={{
+            title: 'Welcome',
+            headerStyle: {
+              backgroundColor: 'lightsalmon'
+            }
+          }}
+        />
+        <Stack.Screen 
+          name="StartAssesment"
+          component={StartAssesment}
+          options={{title: 'Assesment Page'}}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+
   );
 }
 
@@ -23,7 +57,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
     paddingTop: '30%'
-   // marginTop: 50,
   },
   headerText: {
     color: 'white',
@@ -38,3 +71,5 @@ const styles = StyleSheet.create({
     borderRadius: 150,
   },
 });
+
+
