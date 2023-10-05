@@ -3,6 +3,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button, Image } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import StartAssesment from './StartAssesment';
+import LevelMap from './LevelMap';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -18,6 +19,10 @@ function HomeScreen({ navigation }) {
       <Button  
         title = "Start Assesment"
         onPress={() => navigation.navigate('StartAssesment')}
+      />
+      <Button  
+        title = "Skip Assesment"
+        onPress={() => navigation.navigate('LevelMap')}
       />
       <StatusBar style="auto" />
 
@@ -43,6 +48,11 @@ export default function App() {
           name="StartAssesment"
           component={StartAssesment}
           options={{title: 'Assesment Page'}}
+        />
+        <Stack.Screen 
+          name="LevelMap"
+          component={LevelMap}
+          options={{title: 'Level Map', headerBackVisible: false}}
         />
       </Stack.Navigator>
     </NavigationContainer>
