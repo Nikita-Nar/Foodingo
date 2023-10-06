@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Button, View, Text, StyleSheet, TouchableOpacity, ImageBackground} from "react-native";
+import { Button, View, Text, StyleSheet, TouchableOpacity, ImageBackground, Alert} from "react-native";
 import { Ionicons } from '@expo/vector-icons';
 
 const BackgroundImg = require('./LevelMapBG.jpg');
@@ -19,7 +19,7 @@ const LevelButton = ({title, onPress}) => {
     );
 };
 
-const LevelMap = () => {
+function LevelMap({navigation}){
     return (
         <ImageBackground source={BackgroundImg} 
         style={styles.container}>
@@ -30,14 +30,30 @@ const LevelMap = () => {
                 name= 'information-circle-outline'
                 size= {32}
                 color= 'white'
-                onPress= {() => alert("Not Available Yet")}
+                onPress= {() => Alert.alert('Get Started', 'Choose A Recipes Difficulty Level')}
             />
 
             {levels.map((level, index) => ( 
                 <LevelButton 
                     key={index}
                     title={level}
-                    onPress={() => alert("Not Available Yet")}
+                    onPress={() => {switch(index){
+                        case 0:
+                            navigation.navigate('NewbieLevel')
+                            break;
+                        case 1:
+                            navigation.navigate('NoviceLevel')
+                            break;
+                        case 2:
+                            navigation.navigate('MidTierLevel')
+                            break;
+                        case 3:
+                            navigation.navigate('AdvancedLevel')
+                            break;
+                        case 4:
+                            navigation.navigate('ExpertLevel')
+                            break;
+                    }}}
                 />
              ))}
             
