@@ -1,10 +1,7 @@
 import { useState } from 'react';
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+
+import {SectionList, Pressable, StyleSheet, Text, View} from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-
-// #1: Make app container a ScrollView.
-// #2: Have only one checkbox checked at a time.
-
 
 function MyCheckbox() {
   const [checked, setChecked] = useState(false);
@@ -16,92 +13,44 @@ function MyCheckbox() {
     </Pressable>
   );
 }
-
-export default function MidTierLevel() {
-  return (
-    <View style={styles.appContainer}>
-
-      <Text style={styles.appTitle}>Checkbox Example</Text>
-
-      <View style={styles.checkboxContainer}>
-        <MyCheckbox />
-        <Text style={styles.checkboxLabel}>{`one`}</Text>
-      </View>
-
-      <View style={styles.checkboxContainer}>
-        <MyCheckbox />
-        <Text style={styles.checkboxLabel}>{`two`}</Text>
-      </View>
-
-      <View style={styles.checkboxContainer}>
-        <MyCheckbox />
-        <Text style={styles.checkboxLabel}>{`three`}</Text>
-      </View>
-
-      <View style={styles.checkboxContainer}>
-        <MyCheckbox />
-        <Text style={styles.checkboxLabel}>{`four`}</Text>
-      </View>
-
-      <Text style={styles.appTitle}>Checkbox Example</Text>
-
-      <View style={styles.checkboxContainer}>
-        <MyCheckbox />
-        <Text style={styles.checkboxLabel}>{`one`}</Text>
-      </View>
-
-      <View style={styles.checkboxContainer}>
-        <MyCheckbox />
-        <Text style={styles.checkboxLabel}>{`two`}</Text>
-      </View>
-
-      <View style={styles.checkboxContainer}>
-        <MyCheckbox />
-        <Text style={styles.checkboxLabel}>{`three`}</Text>
-      </View>
-
-      <View style={styles.checkboxContainer}>
-        <MyCheckbox />
-        <Text style={styles.checkboxLabel}>{`four`}</Text>
-      </View>
-
-      <Text style={styles.appTitle}>Checkbox Example</Text>
-
-      <View style={styles.checkboxContainer}>
-        <MyCheckbox />
-        <Text style={styles.checkboxLabel}>{`one`}</Text>
-      </View>
-
-      <View style={styles.checkboxContainer}>
-        <MyCheckbox />
-        <Text style={styles.checkboxLabel}>{`two`}</Text>
-      </View>
-
-      <View style={styles.checkboxContainer}>
-        <MyCheckbox />
-        <Text style={styles.checkboxLabel}>{`three`}</Text> 
-      </View>
-
-      <View style={styles.checkboxContainer}>
-        <MyCheckbox />
-        <Text style={styles.checkboxLabel}>{`four`}</Text>
-      </View>
-
-    </View>
-
-
-
-
-    
-  );
-}
-
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    
+    paddingTop: 22,
+  },
+  appTitle: {
+    fontFamily: 'Avenir-Roman',
+    fontWeight: 'bold',
+    textAlign: 'center',
+    fontSize: 24,
+  },
+  sectionHeader: {
+    backgroundColor: '',
+    marginTop: 16,
+    paddingTop: 2,
+    paddingLeft: 10,
+    paddingRight: 10,
+    paddingBottom: 2,
+    fontSize: 16,
+    fontWeight: 'bold',
+    backgroundColor: 'rgba(247,247,247,1.0)',
+  },
+  checkboxContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    margin: 10,
+  },
+  item: {
+    marginLeft: 8,
+    fontWeight: 500,
+    fontSize: 18,
+    padding: 16,
+  },
   checkboxBase: {
     width: 24,
     height: 24,
-    justifyContent: 'center',
-    alignItems: 'center',
+    alignContent: 'center',
     borderRadius: 4,
     borderWidth: 2,
     borderColor: '#ff0000',
@@ -110,28 +59,59 @@ const styles = StyleSheet.create({
   checkboxChecked: {
     backgroundColor: '#ff0000',
   },
-  appContainer: {
-    backgroundColor: 'lightsalmon',
-    flex: 1,
-    alignItems: 'left',
-    justifyContent: 'center',
-    
-  },
-  appTitle: {
-    marginVertical: 16,
-    fontFamily: 'Avenir-Roman',
-    fontWeight: 'bold',
-    fontSize: 24,
-  },
-  checkboxContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    margin: 10,
-  },
-  checkboxLabel: {
-    marginLeft: 8,
-    fontWeight: 500,
-    fontSize: 18,
-    paddingRight: 16,
-  },
+
 });
+
+
+const SectionListBasics = () => {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.appTitle}>Mid-Tier Assesment</Text>
+      <SectionList
+        sections={[
+          {title: 'To cook pasta, you must: _________, until desired state is reached ', 
+          data: ['Put into cold water then boil', 
+          'Put into simmmering water and continue simmering', 'Put into boiling water and keep boiling', 
+          'None of the above']},
+          {
+            title: 'Question 2',
+            data: [
+              'Jackson',
+              'James',
+              'Jillian',
+              'Jimmy',
+            ],
+          },
+          {
+            title: 'Question 3',
+            data: [
+              'Jackson',
+              'James',
+              'Jillian',
+              'Jimmy',
+            ],
+          },
+          {
+            title: 'Question 4',
+            data: [
+              'Jackson',
+              'James',
+              'Jillian',
+              'Jimmy',
+            ],
+          },
+        ]}
+        renderSectionHeader={({section}) => (
+          <Text style={styles.sectionHeader}>{section.title}</Text>
+        )}
+        renderItem={({item}) => <View style={styles.checkboxContainer}><MyCheckbox /><Text style={styles.item}>{item}</Text></View>}
+
+        keyExtractor={item => `basicListEntry-${item}`}
+      />
+    
+    </View>
+  );
+};
+
+
+export default SectionListBasics;
