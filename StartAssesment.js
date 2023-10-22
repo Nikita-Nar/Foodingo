@@ -26,7 +26,7 @@ const CustomButton = ({ title, onPress, isChecked }) => {
         </TouchableOpacity>
     );
 };
-const StartAssesment = () => {
+function StartAssesment ({navigation}) {
     // [isChecked, setIsChecked] = useState(false);
     const [selectedButton, setSelectedButton] = useState([]);
 
@@ -46,6 +46,12 @@ const StartAssesment = () => {
        setSelectedButton(newSelectedButtons);
     };
 
+    function Confirm () {
+        // add code that take user response and unlock certain level base on response
+        nav = navigation
+        nav.navigate("LevelMap");   
+     };
+
     return (
         <View style={styles.container}>
             <Text>You Can... (Choose All That Apply)</Text>
@@ -57,6 +63,7 @@ const StartAssesment = () => {
                     isChecked={selectedButton.includes(index)}
                 />
              ))}
+            <Button title="Confirm" onPress={() => Confirm()}></Button>
         </View>
 
     );
