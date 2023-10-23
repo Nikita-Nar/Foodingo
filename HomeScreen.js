@@ -1,7 +1,7 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, Button, Image, ImageBackground, TouchableOpacity} from 'react-native';
-import LinearGradient from 'react-native-linear-gradient';
+//import LinearGradient from 'react-native-linear-gradient';
 
 const logoImage = require('./assets/DingoLogo.jpg');
 const BackgroundImg = require('./assets/StartingBG.jpg');
