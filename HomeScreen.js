@@ -1,7 +1,10 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, Button, Image, ImageBackground, TouchableOpacity} from 'react-native';
-import LinearGradient from 'react-native-linear-gradient';
+import { StyleSheet, Text, Button, Image, ImageBackground, TouchableOpacity, TextInput} from 'react-native';
+//import LinearGradient from 'react-native-linear-gradient';
+
+//import db from './firebase';
+//import { addDoc, collection } from "firebase/firestore";
 
 const logoImage = require('./assets/DingoLogo.jpg');
 const BackgroundImg = require('./assets/StartingBG.jpg');
@@ -15,6 +18,22 @@ const AssessmentButton = ({title, onPress}) => {
 };
 
 function HomeScreen({ navigation }) {
+
+  /*
+  //This is taken from Firebase Cloud Firestore example code
+  const testing = async() => {
+    try {
+      const docRef = await addDoc(collection(db, "users"), {
+        first: "Ada",
+        last: "Lovelace",
+        born: 1815
+      });
+      console.log("Document written with ID: ", docRef.id);
+    } catch (e) {
+      console.error("Error adding document: ", e);
+    }
+  }
+  */
   return (
     <ImageBackground source={BackgroundImg} style={styles.container}>
       <Image source={logoImage} style={styles.logo}/>
@@ -34,10 +53,16 @@ function HomeScreen({ navigation }) {
         onPress={() => navigation.navigate('DifficultySelection')}
       />  
   <Text style={styles.subText}>Choose your own level?</Text>*/}
-      
-      <StatusBar style="auto" />
 
+      {/* <TextInput
+      style={styles.subText}
+      placeholder= "Enter something"
+      onSubmitEditing= {testing}
+      />
+      <StatusBar style="auto" />*/}
+    
     </ImageBackground>
+    
   );
 }
 

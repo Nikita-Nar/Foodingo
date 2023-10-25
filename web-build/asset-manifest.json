@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.js": "/static/js/main.ab8ce570.js",
+    "static/js/842.6f46e45e.js": "/static/js/842.6f46e45e.js",
+    "static/media/Ionicons.ttf": "/static/media/Ionicons.3517aeaa34b2f8cd8eef.ttf",
+    "static/media/LevelMapBG.jpg": "/static/media/LevelMapBG.a72715a8b28725af4d7f.jpg",
+    "static/media/StartingBG.jpg": "/static/media/StartingBG.92569471e70a453fff78.jpg",
+    "favicon.ico": "/favicon.ico",
+    "static/media/DingoLogo.jpg": "/static/media/DingoLogo.e9365f856c7297f3930f.jpg",
+    "index.html": "/index.html",
+    "favicon-32.png": "/favicon-32.png",
+    "favicon-16.png": "/favicon-16.png",
+    "serve.json": "/serve.json",
+    "manifest.json": "/manifest.json",
+    "main.ab8ce570.js.map": "/static/js/main.ab8ce570.js.map",
+    "842.6f46e45e.js.map": "/static/js/842.6f46e45e.js.map"
+  },
+  "entrypoints": [
+    "static/js/842.6f46e45e.js",
+    "static/js/main.ab8ce570.js"
+  ]
+}
