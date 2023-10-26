@@ -4,10 +4,10 @@
     "slug": "Foodingo",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/DingoLogo.jpg",
+    "icon": "./assets/images/DingoLogo.jpg",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/DingoLogo.jpg",
+      "image": "./assets/images/1.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -19,12 +19,12 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/LevelMapBG.jpg",
+        "foregroundImage": "./assets/images/LevelMapBG.jpg",
         "backgroundColor": "#ffffff"
       }
     },
     "web": {
-      "favicon": "./assets/DingoLogo.jpg"
+      "favicon": "./assets/images/DingoLogo.jpg"
     }
   }
 }

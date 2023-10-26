@@ -1,13 +1,13 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, Button, Image, ImageBackground, TouchableOpacity, TextInput} from 'react-native';
+import { StyleSheet, Text, Button, Image, ImageBackground, TouchableOpacity } from 'react-native';
 //import LinearGradient from 'react-native-linear-gradient';
 
 //import db from './firebase';
 //import { addDoc, collection } from "firebase/firestore";
 
-const logoImage = require('./assets/DingoLogo.jpg');
-const BackgroundImg = require('./assets/StartingBG.jpg');
+const logoImage = require('./assets/images/DingoLogo.jpg');
+const BackgroundImg = require('./assets/images/StartingBG.jpg');
 
 const AssessmentButton = ({title, onPress}) => {
   return(
@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
   chefText: {
     color: 'white',
     fontSize: 37,
-    fontFamily: 'Avenir-Roman',
+    fontFamily: 'Avenir',
     letterSpacing: 7,
     textAlign: 'center',
     paddingTop: 10,
@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
   buttonText: {
       textTransform: 'uppercase',
       color: '#f04713',
-      fontFamily: 'Arial-BoldMT',
+      fontFamily: 'Avenir',
       fontWeight: 'bold',
       letterSpacing: 3,
       fontSize: 20,

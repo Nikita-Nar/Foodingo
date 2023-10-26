@@ -1,3 +1,296 @@
+
+Culinary Skill Level Quiz
+
+Level 1: Newbie
+
+What is the main ingredient in a classic Caprese salad?
+a. Lettuce
+b. Tomato
+c. Pasta
+d. Steak
+What is the ideal temperature for cooking chicken to ensure it's safe to eat?
+a. 145°F (63°C)
+b. 160°F (71°C)
+c. 175°F (79°C)
+d. 165°F (74°C)
+Which ingredient is commonly used to thicken soups and stews?
+a. Flour
+b. Sugar
+c. Vinegar
+d. Soy sauce
+What is the term for rapidly boiling and then plunging vegetables into ice water to retain their color and texture?
+a. Searing
+b. Roasting
+c. Blanching
+d. Grilling
+Which of the following is a sweet, whipped dessert often used to top pies and cakes?
+a. Mayonnaise
+b. Whipped cream
+c. Ketchup
+d. Mustard
+In what type of cuisine is "sushi" a traditional dish?
+a. Mexican
+b. Italian
+c. Japanese
+d. Indian
+What is the key ingredient in a classic Greek salad?
+a. Avocado
+b. Olives
+c. Feta cheese
+d. Croutons
+What does "al dente" mean when referring to pasta?
+a. Soft and overcooked
+b. Firm to the bite
+c. Chewy and rubbery
+d. Mushy and undercooked
+What is the primary seasoning in a classic Caesar salad dressing?
+a. Soy sauce
+b. Balsamic vinegar
+c. Mayonnaise
+d. Anchovy
+How should you properly hold a chef's knife while chopping vegetables?
+a. Fingers extended, gripping the blade
+b. Fingers curled under, gripping the handle
+c. Thumb on top, fingers gripping the blade
+d. Thumb on top, fingers gripping the handle
+
+------------------------------
+
+Level 2: Novice
+
+What is the technique of cutting food into long, thin strips called?
+a. Mince
+b. Dice
+c. Julienne
+d. Grate
+Which type of rice is commonly used to make paella?
+a. Arborio
+b. Basmati
+c. Long-grain
+d. Valencia
+What is the main ingredient in the classic French dish "Bouillabaisse"?
+a. Beef
+b. Chicken
+c. Fish and seafood
+d. Vegetables
+What is the primary herb used in traditional pesto sauce?
+a. Rosemary
+b. Parsley
+c. Basil
+d. Sage
+What is the technique of "deglazing" in cooking?
+a. Reducing liquid by boiling
+b. Adding alcohol to deglaze the pan
+c. Searing meat quickly
+d. Grating cheese
+Which of the following is a classic French mother sauce?
+a. Béchamel
+b. Tomato
+c. Teriyaki
+d. Salsa
+How is "parboiling" different from boiling?
+a. Parboiling uses less water
+b. Parboiling uses higher heat
+c. Parboiling is a shorter cooking time
+d. Parboiling involves adding oil
+What type of knife is typically used for slicing thin cuts of meat or fish?
+a. Cleaver
+b. Paring knife
+c. Serrated knife
+d. Boning knife
+What is the key ingredient in a classic "Gazpacho" soup?
+a. Tomatoes
+b. Pumpkin
+c. Beef
+d. Lentils
+Which culinary term refers to the technique of cutting vegetables into small, even cubes?
+a. Julienne
+b. Mince
+c. Brunoise
+d. Dice
+
+------------------------------
+
+Level 3: Mid-Tier
+
+What is the process of cooking food in a vacuum-sealed bag in a water bath at a precise temperature called?
+a. Braising
+b. Grilling
+c. Poaching
+d. Sous-vide
+What is the primary ingredient in a classic "Vichyssoise" soup?
+a. Leeks and potatoes
+b. Tomatoes
+c. Carrots and peas
+d. Pumpkin
+What is the primary herb used in traditional Thai green curry?
+a. Cilantro
+b. Oregano
+c. Basil
+d. Tarragon
+Which type of flour is best for making light and airy baked goods like cakes?
+a. Bread flour
+b. Whole wheat flour
+c. All-purpose flour
+d. Cake flour
+What is the main ingredient in a classic "Béarnaise" sauce?
+a. Cream
+b. Tomato
+c. Hollandaise sauce
+d. Tarragon
+What is the technique of "emulsion" in cooking?
+a. Mixing two immiscible liquids
+b. Reducing a sauce
+c. Grilling over an open flame
+d. Searing meat quickly
+What is the process of cooking food in a water bath at low temperatures for an extended period called?
+a. Roasting
+b. Braising
+c. Poaching
+d. Steaming
+Which of the following is a traditional Middle Eastern dish made with bulgur wheat, parsley, mint, and tomatoes?
+a. Hummus
+b. Tzatziki
+c. Tabouleh
+d. Falafel
+In which cuisine is the dish "Ratatouille" a traditional specialty?
+a. Italian
+b. French
+c. Spanish
+d. Indian
+What is the primary ingredient in a classic "Carbonara" pasta sauce?
+a. Cream
+b. Tomato
+c. Eggs and cheese
+d. Pesto
+
+------------------------------
+
+Level 4: Advanced
+
+What is the term for the technique of cooking food partially in boiling water, then immediately plunging it into ice water to stop the cooking?
+a. Blanching
+b. Searing
+c. Roasting
+d. Simmering
+What is the main ingredient in the classic French dish "Coq au Vin"?
+a. Beef
+b. Chicken
+c. Fish
+d. Lamb
+What type of knife cut produces very small cubes and is often used for vegetables in a mirepoix?
+a. Brunoise
+b. Julienne
+c. Chiffonade
+d. Tourne
+What is the purpose of a roux used for in cooking?
+a. Thickening sauces
+b. Seasoning dishes
+c. Marinating meat
+d. Searing steaks
+What is the term for the process of cooking food using indirect heat, often in an outdoor smoker?
+a. Grilling
+b. Barbecuing
+c. Searing
+d. Broiling
+What is the technique of "tempering" when making custards and sauces?
+a. Adding spices for flavor
+b. Slowly heating eggs without curdling
+c. Quickly chilling a hot dish
+d. Simmering ingredients in wine
+What is the primary ingredient in a classic "Béchamel" sauce?
+a. Cream
+b. Tomato
+c. Flour and butter
+d. Wine
+In baking, what is the purpose of using a "sponge" or "starter" in sourdough bread recipes?
+a. To add sweetness
+b. To improve texture
+c. To reduce rising time
+d. To develop flavor
+What type of pan is often used for making paella?
+a. Cast iron skillet
+b. Wok
+c. Dutch oven
+d. Paella pan
+What is the process of infusing flavors by heating liquid, typically milk or cream, and then steeping with herbs or spices?
+a. Braising
+b. Infusion
+c. Reduction
+d. Caramelization
+
+------------------------------
+
+Level 5: Expert
+
+What is the primary difference between a béchamel sauce and a velouté sauce?
+a. The type of milk used
+b. The type of stock used
+c. The addition of cream
+d. The cooking time
+What type of cheese is commonly used in a classic Caesar salad?
+a. Cheddar
+b. Parmesan
+c. Gouda
+d. Swiss
+What is the key technique for creating a "jus" sauce?
+a. Reducing and deglazing
+b. Simmering with cream
+c. Adding vinegar
+d. Searing at high heat
+What is the term for the technique of confining heat within a sealed container, typically for slow cooking or preserving food?
+a. Braising
+b. Sous-vide
+c. Canning
+d. Roasting
+What type of knife is often used for making intricate cuts and decorative garnishes in fruits and vegetables?
+a. Chef's knife
+b. Paring knife
+c. Nakiri knife
+d. Utility knife
+What is the primary ingredient in a classic "Bordelaise" sauce?
+a. Cream
+b. Tomato
+c. Red wine and shallots
+d. Béarnaise sauce
+What is the role of "spherification" in modernist cuisine?
+a. Creating spherical shapes
+b. Rapid freezing
+c. Emulsifying sauces
+d. Cooking with steam
+What is the technique of "en papillote" in cooking?
+a. Cooking in parchment paper
+b. Basting with sauce
+c. Slow-cooking in a Dutch oven
+d. Flash frying
+What is the primary ingredient in a classic "Béarnaise" sauce?
+a. Cream
+b. Tomato
+c. Hollandaise sauce
+d. Tarragon
+What is the purpose of a "mirepoix" in cooking?
+a. To add a sweet flavor
+b. To thicken sauces
+c. To provide a base flavor
+d. To garnish dishes
+
+------------------------------
+
+Grading Rubric:
+
+Novice (Beginner): 0-10 correct answers
+Beginner: 11-20 correct answers
+Intermediate: 21-30 correct answers
+Advanced: 31-40 correct answers
+Expert: 41-50 correct answers
+
+------------------------------
+
+
+------------------------------
+
+Some More questions:
+
 You're preparing to cook a deep-fried eggplant as 
 a side dish and garnish for the main course. You're friend 
 offers to help.

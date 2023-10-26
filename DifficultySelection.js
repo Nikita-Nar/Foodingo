@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { Button, View, Text, StyleSheet, TouchableOpacity, ImageBackground, Alert} from "react-native";
 import { Ionicons } from '@expo/vector-icons';
 
-const BackgroundImg = require('./assets/LevelMapBG.jpg');
+const BackgroundImg = require('./assets/images/LevelMapBG.jpg');
 const levels = [
     'Newbie',
     'Novice',
