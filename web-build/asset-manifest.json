@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.js": "/static/js/main.ab8ce570.js",
-    "static/js/842.6f46e45e.js": "/static/js/842.6f46e45e.js",
+    "main.js": "/static/js/main.95ffecc4.js",
+    "static/js/569.6dcd55ef.js": "/static/js/569.6dcd55ef.js",
     "static/media/Ionicons.ttf": "/static/media/Ionicons.3517aeaa34b2f8cd8eef.ttf",
     "static/media/LevelMapBG.jpg": "/static/media/LevelMapBG.a72715a8b28725af4d7f.jpg",
+    "static/media/bg1.jpg": "/static/media/bg1.2f6f71ae5555c6cd5586.jpg",
     "static/media/StartingBG.jpg": "/static/media/StartingBG.92569471e70a453fff78.jpg",
     "favicon.ico": "/favicon.ico",
     "static/media/DingoLogo.jpg": "/static/media/DingoLogo.e9365f856c7297f3930f.jpg",
@@ -12,11 +13,11 @@
     "favicon-16.png": "/favicon-16.png",
     "serve.json": "/serve.json",
     "manifest.json": "/manifest.json",
-    "main.ab8ce570.js.map": "/static/js/main.ab8ce570.js.map",
-    "842.6f46e45e.js.map": "/static/js/842.6f46e45e.js.map"
+    "main.95ffecc4.js.map": "/static/js/main.95ffecc4.js.map",
+    "569.6dcd55ef.js.map": "/static/js/569.6dcd55ef.js.map"
   },
   "entrypoints": [
-    "static/js/842.6f46e45e.js",
-    "static/js/main.ab8ce570.js"
+    "static/js/569.6dcd55ef.js",
+    "static/js/main.95ffecc4.js"
   ]
 }
