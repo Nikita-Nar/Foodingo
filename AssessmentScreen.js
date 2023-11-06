@@ -2,8 +2,6 @@ import { useState } from 'react';
 import {SectionList, Pressable, Button, StyleSheet, Text, View, TouchableOpacity, Alert} from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { sectionListData } from './SectionListData'; 
-import LevelMap from './LevelMap';
-import { test } from './LevelMap';
 
 const FinishAssessmentButton = ({title, onPress}) => {
   return(
@@ -15,58 +13,255 @@ const FinishAssessmentButton = ({title, onPress}) => {
 
 let answerArr = [];
 let correctAnswer = 0;
+let isChecked = [];
 
 
 const MyCheckbox = ({index, sectionIndex}) =>{
   const [checked, setChecked] = useState(false);
 
   function pressHandle(){
-      setChecked(!checked)
-      if(sectionIndex === 0 && index === 2){
-        answerArr[sectionIndex] = !checked;
-      }
-      if(sectionIndex === 1 && index === 3){
-        answerArr[sectionIndex] = !checked;
-      }
-      if(sectionIndex === 2 && index === 0){
-        answerArr[sectionIndex] = !checked
-      }
-      if(sectionIndex === 3 && index === 2){
-        answerArr[sectionIndex] = !checked
-      }
-      if(sectionIndex === 4 && index === 1){
-        answerArr[sectionIndex] = !checked
-      }
-      if(sectionIndex === 5 && index === 2){
-        answerArr[sectionIndex] = !checked
-      }
-      if(sectionIndex === 6 && index === 3){
-        answerArr[sectionIndex] = !checked
-      }
-      if(sectionIndex === 7 && index === 0){
-        answerArr[sectionIndex] = !checked
-      }
-      if(sectionIndex === 8 && index === 1){
-        answerArr[sectionIndex] = !checked
-      }
-      if(sectionIndex === 9 && index === 3){
-        answerArr[sectionIndex] = !checked
-      }
-      if(sectionIndex === 10 && index === 2){
-        answerArr[sectionIndex] = !checked
-      }
-      if(sectionIndex === 11 && index === 0){
-        answerArr[sectionIndex] = !checked
-      }
-      if(sectionIndex === 12 && index === 1){
-        answerArr[sectionIndex] = !checked
-      }
-      if(sectionIndex === 13 && index === 2){
-        answerArr[sectionIndex] = !checked
-      }
-      if(sectionIndex === 14 && index === 1){
-        answerArr[sectionIndex] = !checked
-      }
+    switch(sectionIndex){
+      case 0:
+        if(!isChecked[sectionIndex]){
+          setChecked(!checked)
+          isChecked[sectionIndex] = true
+          if (index === 2){
+            answerArr[sectionIndex] = !checked
+          }
+        }
+        else if(checked === true){
+          setChecked(!checked)
+          if (index === 2){
+            answerArr[sectionIndex] = !checked
+          }
+          isChecked[sectionIndex] = false
+        }
+        break;
+      case 1:
+        if(!isChecked[sectionIndex]){
+          setChecked(!checked)
+          isChecked[sectionIndex] = true
+          if (index === 3){
+            answerArr[sectionIndex] = !checked
+          }
+        }
+        else if(checked === true){
+          setChecked(!checked)
+          if (index === 3){
+            answerArr[sectionIndex] = !checked
+          }
+          isChecked[sectionIndex] = false
+        }
+        break;
+      case 2:
+        if(!isChecked[sectionIndex]){
+          setChecked(!checked)
+          isChecked[sectionIndex] = true
+          if (index === 0){
+          answerArr[sectionIndex] = !checked
+          }
+        }
+        else if(checked === true){
+          setChecked(!checked)
+          if (index === 0){
+          answerArr[sectionIndex] = !checked
+          }
+          isChecked[sectionIndex] = false
+          }
+        break;
+      case 3:
+        if(!isChecked[sectionIndex]){
+          setChecked(!checked)
+          isChecked[sectionIndex] = true
+          if (index === 2){
+            answerArr[sectionIndex] = !checked
+          }
+         }
+        else if(checked === true){
+          setChecked(!checked)
+          if (index === 2){
+            answerArr[sectionIndex] = !checked
+          }
+          isChecked[sectionIndex] = false
+        }
+        break;
+      case 4:
+        if(!isChecked[sectionIndex]){
+          setChecked(!checked)
+          isChecked[sectionIndex] = true
+          if (index === 1){
+            answerArr[sectionIndex] = !checked
+          }
+        }
+        else if(checked === true){
+          setChecked(!checked)
+          if (index === 1){
+            answerArr[sectionIndex] = !checked
+          }
+          isChecked[sectionIndex] = false
+        }
+        break;
+      case 5:
+        if(!isChecked[sectionIndex]){
+          setChecked(!checked)
+          isChecked[sectionIndex] = true
+          if (index === 2){
+            answerArr[sectionIndex] = !checked
+          }
+        }
+        else if(checked === true){
+          setChecked(!checked)
+          if (index === 2){
+            answerArr[sectionIndex] = !checked
+          }
+          isChecked[sectionIndex] = false
+        }
+        break;
+      case 6:
+        if(!isChecked[sectionIndex]){
+          setChecked(!checked)
+          isChecked[sectionIndex] = true
+          if (index === 3){
+            answerArr[sectionIndex] = !checked
+          }
+        }
+        else if(checked === true){
+          setChecked(!checked)
+          if (index === 3){
+            answerArr[sectionIndex] = !checked
+          }
+          isChecked[sectionIndex] = false
+        }
+        break;
+      case 7:
+        if(!isChecked[sectionIndex]){
+          setChecked(!checked)
+          isChecked[sectionIndex] = true
+          if (index === 0){
+            answerArr[sectionIndex] = !checked
+          }
+        }
+        else if(checked === true){
+          setChecked(!checked)
+          if (index === 0){
+            answerArr[sectionIndex] = !checked
+          }
+          isChecked[sectionIndex] = false
+        }
+        break;
+      case 8:
+        if(!isChecked[sectionIndex]){
+          setChecked(!checked)
+          isChecked[sectionIndex] = true
+          if (index === 1){
+            answerArr[sectionIndex] = !checked
+          }
+        }
+        else if(checked === true){
+          setChecked(!checked)
+          if (index === 1){
+            answerArr[sectionIndex] = !checked
+          }
+          isChecked[sectionIndex] = false
+        }
+        break;
+      case 9:
+        if(!isChecked[sectionIndex]){
+          setChecked(!checked)
+          isChecked[sectionIndex] = true
+          if (index === 3){
+            answerArr[sectionIndex] = !checked
+          }
+        }
+        else if(checked === true){
+          setChecked(!checked)
+          if (index === 3){
+            answerArr[sectionIndex] = !checked
+          }
+          isChecked[sectionIndex] = false
+        }
+        break;
+      case 10:
+        if(!isChecked[sectionIndex]){
+          setChecked(!checked)
+          isChecked[sectionIndex] = true
+          if (index === 2){
+            answerArr[sectionIndex] = !checked
+          }
+        }
+        else if(checked === true){
+          setChecked(!checked)
+          if (index === 2){
+            answerArr[sectionIndex] = !checked
+          }
+          isChecked[sectionIndex] = false
+        }
+        break; 
+      case 11:
+        if(!isChecked[sectionIndex]){
+          setChecked(!checked)
+          isChecked[sectionIndex] = true
+          if (index === 0){
+            answerArr[sectionIndex] = !checked
+          }
+        }
+        else if(checked === true){
+          setChecked(!checked)
+          if (index === 0){
+            answerArr[sectionIndex] = !checked
+          }
+          isChecked[sectionIndex] = false
+        }
+        break;
+        case 12:
+        if(!isChecked[sectionIndex]){
+          setChecked(!checked)
+          isChecked[sectionIndex] = true
+          if (index === 1){
+            answerArr[sectionIndex] = !checked
+          }
+        }
+        else if(checked === true){
+          setChecked(!checked)
+          if (index === 1){
+            answerArr[sectionIndex] = !checked
+          }
+          isChecked[sectionIndex] = false
+        }
+        break;
+      case 13:
+        if(!isChecked[sectionIndex]){
+          setChecked(!checked)
+          isChecked[sectionIndex] = true
+          if (index === 2){
+            answerArr[sectionIndex] = !checked
+          }
+        }
+        else if(checked === true){
+          setChecked(!checked)
+          if (index === 2){
+            answerArr[sectionIndex] = !checked
+          }
+          isChecked[sectionIndex] = false
+        }
+        break;
+      case 14:
+        if(!isChecked[sectionIndex]){
+          setChecked(!checked)
+          isChecked[sectionIndex] = true
+          if (index === 1){
+            answerArr[sectionIndex] = !checked
+          }
+        }
+        else if(checked === true){
+          setChecked(!checked)
+          if (index === 1){
+            answerArr[sectionIndex] = !checked
+          }
+          isChecked[sectionIndex] = false
+        }
+        break;
+    }
   }
   
   return (
