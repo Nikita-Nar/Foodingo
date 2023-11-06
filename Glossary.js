@@ -6,7 +6,8 @@ import { ScrollView } from 'react-native';
 
 const BackgroundImg = require('./assets/images/StartingBG.jpg');
 
-export default function Glossary() {
+
+export default function GlossaryScreen() {
   const [meals, setMeals] = useState([]);
   const  [searchQuery, setSearchQuery] = useState('');
   const url ="https://www.themealdb.com/api/json/v1/1/categories.php";
