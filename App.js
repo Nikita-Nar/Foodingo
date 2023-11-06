@@ -38,9 +38,9 @@ export default function App() {
           options={{headerShown: false}}
         />
         <Stack.Screen 
-          name="Recipies"
+          name="Recipes"
           component={LevelTemplate}
-          options={{title: 'Recipies'}}       
+          options={{title: 'Recipes'}}       
         />
       </Stack.Navigator>
     </NavigationContainer>
