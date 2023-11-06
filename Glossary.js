@@ -6,6 +6,7 @@ import { ScrollView } from 'react-native';
 
 const BackgroundImg = require('./assets/images/StartingBG.jpg');
 
+
 export default function GlossaryScreen() {
   const [meals, setMeals] = useState([]);
   const  [searchQuery, setSearchQuery] = useState('');
