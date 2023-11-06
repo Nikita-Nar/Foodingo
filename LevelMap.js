@@ -19,7 +19,7 @@ const LevelMap = ({navigation}) => {
     const numLevels = 20;
 
     const HandleLevelClick = (level) => {
-       navigation.navigate("Recipies")
+       navigation.navigate("Recipes")
     }; 
 
     const levelNodeArr = [];

@@ -1,13 +1,51 @@
-import * as React from 'react-native';
-import { View, Text } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
+import { useState,useEffect } from 'react';
+import { View } from 'react-native';
+import { Appbar, Searchbar, Card, Paragraph} from 'react-native-paper';
+import { ScrollView } from 'react-native';
 
-export default function GlossaryScreen({navigation}) {
-    return(
-        <View style={{flex:1, alignItems: 'center', justifyContent: 'center'}}>
-            <Text style={{fontSize: 26, fontWeight: 'bold'}}>
-                GLOSSARY
-            </Text>
+const BackgroundImg = require('./assets/images/StartingBG.jpg');
 
-        </View>
-    );
+export default function GlossaryScreen() {
+  const [meals, setMeals] = useState([]);
+  const  [searchQuery, setSearchQuery] = useState('');
+  const url ="https://www.themealdb.com/api/json/v1/1/categories.php";
+  const getMeals = async () =>{
+  const response = await fetch(url);
+  const data = await response.json();
+  setMeals(data.categories);
+   
+ }
+  useEffect(()=>{
+    getMeals();
+  },[])
+
+  const onChangeSearch = query =>setSearchQuery(query);
+  return (
+    <View>
+      <Appbar>
+        <Appbar.Content title="Glossary"/>
+      </Appbar>
+      <Searchbar 
+      placeholder='search'
+      value={searchQuery}
+      onChangeText={onChangeSearch}
+      />
+      <ScrollView>
+        {
+          meals.map(meal=>(
+            <Card key={meal.idCategory}>
+              <Card.Cover source= {{ uri: meal.strCategoryThumb}}/>
+              <Card.Title title={meal.strCategory}/>
+              
+              <Card.Content>
+                <Paragraph>{meal.strCategoryDescription}</Paragraph>
+              </Card.Content>
+            </Card>
+          ))
+        }
+      </ScrollView>
+      <StatusBar style="auto" />
+    </View>
+  );
 }

@@ -1,43 +1,82 @@
-import React from "react";
-import {View, Text, ImageBackground, Image, ScrollView} from "react-native";
-import styles from "./styles";
+import { StatusBar } from 'expo-status-bar';
+import { useState,useEffect } from 'react';
+import { View } from 'react-native';
+import { Appbar, Searchbar, Card, Paragraph} from 'react-native-paper';
+import { ScrollView } from 'react-native';
 
 
-const LevelTemplate = () => {
-    const placeholderImage = require('./assets/bg1.jpg')
-    return (
-        <ScrollView style={{flex:1}}>
-        <View style={{flex:1}}>
-            <Text style={styles.headerTextLevel}>
-                LEVEL NAME
-            </Text>
-            <Image source={placeholderImage} style={styles.levelIntroImage} />
-            <Text>
-                WHAT YOU'LL NEED:{'\n'}
-                - lorem ipsum{'\n'}
-                - lorem ipsum{'\n'}
-                - lorem ipsum{'\n'}
-            </Text>
-            <Text>
-                WHAT YOU'LL LEARN:{'\n'}
-                - lorem ipsum{'\n'}
-                - lorem ipsum{'\n'}
-                - lorem ipsum{'\n'}
-            </Text>
-            <Text>
-                INTRO AND NEW TERM DEFINITIONS{'\n'}
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est l {'\n'}
-            </Text>
-            <Image source={placeholderImage} style={styles.logo} />
-            <Text>
-                LETS GET COOKING!{'\n'}
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est l
-            </Text>
-    
-        </View>
-        </ScrollView>
 
-    );
-};
 
-export default LevelTemplate; 
+export default function LevelTemplate() {
+  const [meals, setMeals] = useState([]);
+  const  [searchQuery, setSearchQuery] = useState('');
+  const url ="https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata";
+  const getMeals = async () =>{
+  const response = await fetch(url);
+  const data = await response.json();
+  setMeals(data.meals);
+   
+ }
+  useEffect(()=>{
+    getMeals();
+  },[])
+  
+  const onChangeSearch = query =>setSearchQuery(query);
+  return (
+    <View>
+      <Appbar>
+        <Appbar.Content title = "Let's begin!"/>
+      </Appbar>
+      <Searchbar 
+      placeholder='search'
+      value={searchQuery}
+      onChangeText={onChangeSearch}
+      />
+
+
+      <ScrollView>
+
+        {
+          meals.map(meal=>(
+            <Card key={meal.idMeal}>
+              <Card.Cover source= {{ uri: meal.strMealThumb }} />
+              <Card.Title title = {meal.strMeal}/>
+              <Card.Content>
+                
+                <Paragraph>
+
+                    {meal.strIngredient1} - {meal.strMeasure1}{'\n'}
+                    {meal.strIngredient2} - {meal.strMeasure2}{'\n'}
+                    {meal.strIngredient3} - {meal.strMeasure3}{'\n'}
+                    {meal.strIngredient4} - {meal.strMeasure4}{'\n'}
+                    {meal.strIngredient5} - {meal.strMeasure5}{'\n'}
+                    {meal.strIngredient6} - {meal.strMeasure6}{'\n'}
+                    {meal.strIngredient7} - {meal.strMeasure7}{'\n'}
+                    {meal.strIngredient8} - {meal.strMeasure8}{'\n'}
+                    
+                    {'\n'}
+                    {meal.strInstructions}
+                    {'\n'}
+                    {'\n'}
+                    {'\n'}
+                    </Paragraph>
+              </Card.Content>
+              
+            </Card>
+          ))
+        }
+      </ScrollView>
+      <StatusBar style="auto" />
+    </View>
+  );
+}
+
+
+
+ /*
+ (property) Title: {
+    ({ title, titleStyle, titleNumberOfLines, titleVariant, titleMaxFontSizeMultiplier, subtitle, subtitleStyle, subtitleNumberOfLines, subtitleVariant, subtitleMaxFontSizeMultiplier, left, leftStyle, right, rightStyle, style, theme: themeOverrides, }: Props): React.JSX.Element;
+    displayName: string;
+}
+
+*/
