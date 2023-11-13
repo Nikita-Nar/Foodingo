@@ -33,7 +33,9 @@ export default function GlossaryScreen() {
       onChangeText={onChangeSearch}
       />
       <ScrollView>
+        <View>
         {
+         
           meals.map(meal=>(
             <Card key={meal.idCategory}>
               <Card.Cover source= {{ uri: meal.strCategoryThumb}}/>
@@ -43,8 +45,9 @@ export default function GlossaryScreen() {
                 <Paragraph>{meal.strCategoryDescription}</Paragraph>
               </Card.Content>
             </Card>
-          ))
+          ))          
         }
+        </View>
       </ScrollView>
       <StatusBar style="auto" />
     </View>
