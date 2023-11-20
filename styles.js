@@ -1,8 +1,6 @@
 import React from "react";
 import {View, StyleSheet, Image, ImageBackground, Dimensions } from "react-native";
 
-
-
 const styles = StyleSheet.create({
     container: {
         flex: 1, //if 1, take up all available space on screen
