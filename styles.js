@@ -1,7 +1,5 @@
 import React from "react";
-import {View, StyleSheet, Image, ImageBackground } from "react-native";
-
-
+import {View, StyleSheet, Image, ImageBackground, Dimensions } from "react-native";
 
 const styles = StyleSheet.create({
     container: {
@@ -22,6 +20,10 @@ const styles = StyleSheet.create({
         resizeMode: 'cover', //mantain aspect ratio of image
         justifyContent: 'center',
         alignItems: 'center', 
+    },
+    backgroundTest: {
+        flex: 1,
+        backgroundColor: 'blue',
     },
     headerText: {
         color: 'white',
@@ -68,7 +70,44 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'flex-start',
         alignItems: 'center',
-    }
+    },
+    levelNodes : {
+        width: 200,
+        height: 200,
+        borderRadius: 100,
+        backgroundColor: 'salmon',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: 30,
+        borderColor: 'black',
+        borderWidth: 2,
+        
+    },
+    levelNodeText: {
+        fontSize: 24,
+        fontWeight: 'bold',
+        color: 'white',
+    },
+    LevelMapContainer: {
+        flex: 1,
+        flexDirection: 'column',
+        alignItems: 'center',
+    },
+    aCircle: {
+        backgroundColor: 'blue',
+        width: 300,
+        height: 300, 
+        marginTop: 50,
+        borderRadius: 150,
+    },
+    pointsContainer: {
+        position: 'absolute',
+        top: 100,
+        right: 10,
+    },
+    pointsText: {
+        fontSize: 24,
+    },
 });
 
 export default styles; 

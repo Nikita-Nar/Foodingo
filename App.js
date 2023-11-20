@@ -1,39 +1,27 @@
 import React from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button, Image } from 'react-native';
-import LinearGradient from 'react-native-linear-gradient';
-import StartAssesment from './StartAssesment';
+import HomeScreen from './HomeScreen';
+import AssessmentScreen from './AssessmentScreen';
+import DifficultySelection from './DifficultySelection'
+import LevelMap from './LevelMap';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import NavContainer from './NavBarContainer';
+import LevelTemplate from './LevelTemplate';
 
-const logoImage = require('./DingoLogo.jpg');
-const Stack = createNativeStackNavigator();
-
-
-function HomeScreen({ navigation }) {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.headerText}>Your Culinary Journey Starts Here</Text>
-      <Image source={logoImage} style={styles.logo}/>
-      <Button  
-        title = "Start Assesment"
-        onPress={() => navigation.navigate('StartAssesment')}
-      />
-      <StatusBar style="auto" />
-
-    </View>
-  );
-}
 
 export default function App() {
+
+  const Stack = createNativeStackNavigator();
+  
   return (
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
-          name = "Home"
+          name="Home"
           component={HomeScreen}
           options={{
             title: 'Welcome',
+            headerShown: false,
             headerStyle: {
               backgroundColor: 'lightsalmon'
             }
@@ -41,35 +29,21 @@ export default function App() {
         />
         <Stack.Screen 
           name="StartAssesment"
-          component={StartAssesment}
-          options={{title: 'Assesment Page'}}
+          component={AssessmentScreen}
+          options={{title: 'Assesment'}}       
+        />
+        <Stack.Screen 
+          name="LevelMap"
+          component={NavContainer}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen 
+          name="Recipes"
+          component={LevelTemplate}
+          options={{title: 'Recipes'}}       
         />
       </Stack.Navigator>
     </NavigationContainer>
-
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'lightsalmon',
-    alignItems: 'center',
-    justifyContent: 'flex-start',
-    paddingTop: '30%'
-  },
-  headerText: {
-    color: 'white',
-    fontSize: 24,
-    // fontWeight: 'bold',
-    textAlign: 'center',
-  },
-  logo: {
-    width: 300,
-    height: 300, 
-    marginTop: 50,
-    borderRadius: 150,
-  },
-});
-
 
