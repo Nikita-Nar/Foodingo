@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { Button, View, Text, StyleSheet, TouchableOpacity, ImageBackground, Alert} from "react-native";
 import { Ionicons } from '@expo/vector-icons';
+import styles from "./styles";
 
 const BackgroundImg = require('./assets/images/LevelMapBG.jpg');
 const levels = [
@@ -13,8 +14,8 @@ const levels = [
 
 const LevelButton = ({title, onPress}) => {
     return(
-        <TouchableOpacity style={styles.button} onPress={onPress}>
-             <Text style ={styles.buttonText}> {title} </Text>
+        <TouchableOpacity style={styles.homeButton} onPress={onPress}>
+             <Text style ={styles.difficultyButtonText}> {title} </Text>
         </TouchableOpacity>
     );
 };
@@ -22,9 +23,9 @@ const LevelButton = ({title, onPress}) => {
 function DifficultySelection({navigation}){
     return (
         <ImageBackground source={BackgroundImg} 
-        style={styles.container}>
-            <Text style={styles.headerText}> Choose </Text>
-            <Text style={styles.headerText}> Your Level </Text>
+        style={styles.difficultyContainer}>
+            <Text style={styles.difficultyHeaderText}> Choose </Text>
+            <Text style={styles.difficultyHeaderText}> Your Level </Text>
             
             <Ionicons
                 name= 'information-circle-outline'
@@ -60,38 +61,5 @@ function DifficultySelection({navigation}){
         </ImageBackground>
     );
 };
-
-const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      alignItems: 'center',
-      justifyContent: 'flex-start',
-      paddingTop: '7%'
-    },
-    headerText: {
-      textTransform: 'uppercase',
-      color: 'white',
-      fontFamily: 'Avenir-Roman',
-      fontSize: 45,
-      textAlign: 'center',
-    },
-    button: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        marginVertical: 40,
-        height: 60,
-        marginBottom: 10,
-        borderRadius: 40,
-        backgroundColor: 'rgba(255 255 255/ 0.5)',
-    },
-    buttonText: {
-        textTransform: 'uppercase',
-        color: '#995c1f',
-        fontFamily: 'Arial Rounded MT Bold',
-        fontSize: 40,
-        textDecorationLine: 'none', 
-        marginLeft: 10,
-    },
-  });
 
 export default DifficultySelection;

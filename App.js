@@ -1,6 +1,7 @@
 import React from 'react';
 import HomeScreen from './HomeScreen';
 import AssessmentScreen from './AssessmentScreen';
+import MiniQuiz from './MiniQuiz';
 import DifficultySelection from './DifficultySelection'
 import LevelMap from './LevelMap';
 import { NavigationContainer } from '@react-navigation/native';
@@ -41,6 +42,11 @@ export default function App() {
           name="Recipes"
           component={LevelTemplate}
           options={{title: 'Recipes'}}       
+        />
+        <Stack.Screen 
+          name="MiniQuiz"
+          component={MiniQuiz}
+          options={{title: 'Mini-Quiz Time!'}}       
         />
       </Stack.Navigator>
     </NavigationContainer>
