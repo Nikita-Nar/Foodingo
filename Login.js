@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {StyleSheet, Text, View, TextInput, TouchableOpacity, ImageBackground } from 'react-native';
 
 
-const LoginPage = () => {
+const LoginPage = ({navigation}) => {
     const [state, setState] = useState({
         email: '',
         password: '',
@@ -10,6 +10,7 @@ const LoginPage = () => {
     const onPressLogin = () => {
         //handle log in pressed
         console.log("Login Pressed");
+        navigation.navigate('Home')
     }
     const onPressForgotPassword = () => {
         //handle forgot password pressed

@@ -8,7 +8,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import NavContainer from './NavBarContainer';
 import LevelTemplate from './LevelTemplate';
-
+import LoginPage from './Login';
 
 export default function App() {
 
@@ -17,6 +17,11 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen 
+          name="Login"
+          component={LoginPage}
+          options={{title: 'Login'}}       
+        />
         <Stack.Screen
           name="Home"
           component={HomeScreen}
