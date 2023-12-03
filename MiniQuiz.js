@@ -7,7 +7,7 @@ import styles from "./styles";
 
 const BackgroundImage = require('./assets/images/StartingBG.jpg');
 
-const MiniQuiz= () => {
+const MiniQuiz= ({route}) => {
     const navigation = useNavigation();
     const questions = quizQuestions;
 
@@ -42,6 +42,15 @@ const MiniQuiz= () => {
     },[index])
 
     const indexQuestion = questions[index];
+
+    const pressHandler = () => {
+        if(route.params.param){
+            navigation.navigate('LevelMap', {screen: 'Level', params:{level: (route.params.level + 1)},})
+        }
+        else{
+            navigation.navigate('LevelMap')
+        }
+    }
 
     return (
         <ImageBackground source={BackgroundImage} style={styles.miniContainer}>
@@ -80,7 +89,7 @@ const MiniQuiz= () => {
             )}
 
             {index + 1 >= questions.length ? (
-                <Pressable style={styles.miniButton} onPress={() => navigation.navigate('LevelMap')}>
+                <Pressable style={styles.miniButton} onPress={() => pressHandler()}>
                     <Text style={styles.miniButtonText}> Finish </Text>
                 </Pressable>
             ) : checked === null ? null : (

@@ -13,7 +13,7 @@ const FinishRecipeButton = ({title, onPress}) => {
   );
 };
 
-export default function LevelTemplate( {navigation} ) {
+export default function LevelTemplate( {route, navigation} ) {
   const [meals, setMeals] = useState([]);
   const  [searchQuery, setSearchQuery] = useState('');
   const url ="https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata";
@@ -23,9 +23,19 @@ export default function LevelTemplate( {navigation} ) {
   setMeals(data.meals);
    
  }
+
   useEffect(()=>{
     getMeals();
   },[])
+
+  const pressHandler = () => {
+    if(route.params.param){
+      navigation.navigate('MiniQuiz' , {level: route.params.level, param: true})
+    }
+    else[
+      navigation.navigate('MiniQuiz' , {param: false})
+    ]
+  }
   
   const onChangeSearch = query =>setSearchQuery(query);
   return (
@@ -63,7 +73,8 @@ export default function LevelTemplate( {navigation} ) {
 
                 <FinishRecipeButton 
                   title = "Finish"
-                  onPress={() => navigation.navigate('MiniQuiz')}
+                  onPress={() => pressHandler()
+                }
                 /> 
 
                 <Paragraph>

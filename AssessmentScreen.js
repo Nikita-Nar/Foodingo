@@ -284,23 +284,23 @@ const SectionListBasics = ({ navigation }) => {
     }
     if(correctAnswer < 4){
       Alert.alert("Congratulation", "You are a Newbie. You start from level 1.  Click the Go To Latest Level button to go to the current latest level you have unlocked.");
-      navigation.navigate('LevelMap', {screen: 'Level', params:{level: 0},})
+      navigation.navigate('LevelMap', {screen: 'Level', params:{level: 1},})
     }
     else if(correctAnswer < 7){
       Alert.alert("Congratulation", "You are a Novice. You may start at level 5. Click the Go To Latest Level button to go to the current latest level you have unlocked.");
-      navigation.navigate('LevelMap', {screen: 'Level', params:{level: 4},})
+      navigation.navigate('LevelMap', {screen: 'Level', params:{level: 5},})
     }
     else if(correctAnswer < 10){
       Alert.alert("Congratulation", "You are a Intermediate Cook. You may start at level 9. Click the Go To Latest Level button to go to the current latest level you have unlocked.");
-      navigation.navigate('LevelMap', {screen: 'Level', params:{level: 8},})
+      navigation.navigate('LevelMap', {screen: 'Level', params:{level: 9},})
     }
     else if(correctAnswer < 13){
       Alert.alert("Congratulation", "You are a Advance Cook. You may start at level 13. Click the Go To Latest Level button to go to the current latest level you have unlocked.");
-      navigation.navigate('LevelMap', {screen: 'Level', params:{level: 12},})
+      navigation.navigate('LevelMap', {screen: 'Level', params:{level: 13},})
     }
     else{
       Alert.alert("Congratulation", "You are a Expert Cook. You may start at level 17. Click the Go To Latest Level button to go to the current latest level you have unlocked.");
-      navigation.navigate('LevelMap', {screen: 'Level', params:{level: 16},})
+      navigation.navigate('LevelMap', {screen: 'Level', params:{level: 17},})
     }
   }
 

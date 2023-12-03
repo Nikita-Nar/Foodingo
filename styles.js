@@ -120,6 +120,17 @@ const styles = StyleSheet.create({
         borderColor: 'black',
         borderWidth: 2,   
     },
+    levelNodes2 : {
+        width: 200,
+        height: 200,
+        borderRadius: 100,
+        backgroundColor: 'grey',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: 30,
+        borderColor: 'black',
+        borderWidth: 2,   
+    },
     levelNodeText: {
         fontSize: 24,
         fontWeight: 'bold',
