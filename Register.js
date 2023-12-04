@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {StyleSheet, Text, View, TextInput, TouchableOpacity, Image, ImageBackground } from 'react-native';
+import { Ionicons } from '@expo/vector-icons'; 
 
 const loginlogoImage = require('./assets/images/DingoLogo.jpg');
 const registerBackground = require('./assets/images/signupBackground.png');

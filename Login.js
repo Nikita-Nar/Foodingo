@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import {StyleSheet, Text, View, TextInput, TouchableOpacity, Image, ImageBackground } from 'react-native';
+import { Ionicons } from '@expo/vector-icons'; 
+import Colors from './Shared/Colors';
 
 const loginlogoImage = require('./assets/images/DingoLogo.jpg');
 
@@ -71,7 +73,11 @@ const LoginPage = ({navigation}) => {
                 Forgot Password?
             </Text>
         </TouchableOpacity>
-
+        <View style={styles.googleButton}>
+        <Ionicons name="logo-google" size={24} color="white" />
+        <Text style={{color:Colors.secondary, verticalAlign: 'center', marginTop: 3, marginLeft: 2}}> Sign In with Google </Text>
+       
+        </View>
     </View>
     </ImageBackground>
     )
@@ -139,6 +145,14 @@ const styles = StyleSheet.create({
     loginText: {
         height: 20,
         color: 'white',
+    },
+    googleButton: {
+        backgroundColor:Colors.primary,
+        padding: 10,
+        margin: 30,
+        borderRadius: 20,
+        display: 'flex',
+        flexDirection: 'row',
     },
     backgroundImage: {
         flex: 1,
