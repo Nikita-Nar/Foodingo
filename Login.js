@@ -27,7 +27,15 @@ const LoginPage = ({navigation}) => {
     style={styles.backgroundImage}
     >
     <View style={styles.logIncontainer}> 
-        <Text style={styles.loginHeader}> Welcome! </Text>
+        <Text style={styles.loginHeader}> Welcome </Text>
+
+        <TouchableOpacity
+            onPress = {onPressSignUp}>
+            <Text style={styles.forgotSignUpText}>
+                New User? Sign up!
+            </Text>
+        </TouchableOpacity>
+
         <View style={styles.inputView}>
             <TextInput style={styles.inputText}
             placeholder='Email'
@@ -42,13 +50,6 @@ const LoginPage = ({navigation}) => {
         </View>
 
         <TouchableOpacity
-            onPress = {onPressForgotPassword}>
-            <Text style={styles.forgotSignUpText}>
-                Forgot Password?
-            </Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity
         onPress={onPressLogin}
         style={styles.loginButton}>
             <Text style={styles.loginText}>
@@ -58,9 +59,9 @@ const LoginPage = ({navigation}) => {
         </TouchableOpacity>
 
         <TouchableOpacity
-        onPress = {onPressSignUp}>
-            <Text style={styles.forgotSignUpText}>
-                Signup
+            onPress = {onPressForgotPassword}>
+            <Text style={styles.forgotPasswordText}>
+                Forgot Password?
             </Text>
         </TouchableOpacity>
 
@@ -81,17 +82,18 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     loginHeader: {
-        fontWeight: "bold",
-        fontSize: 55, 
+        // fontWeight: "bold",
+        fontSize: 55,
+        fontFamily: 'Avenir', 
         color: 'white',
-        marginBottom: 40,
+        marginBottom: 15,
     },
     inputView: {
         width: "80%",
         backgroundColor: "#eab676",
         borderRadius: 25, 
         height: 50,
-        marginBottom: 20,
+        marginBottom: 30,
         justifyContent: 'center',
         padding: 20,
         borderWidth: 2,
@@ -100,10 +102,17 @@ const styles = StyleSheet.create({
     inputText: {
         height: 50,
         color: "white",
+        
     },
     forgotSignUpText: {
         color: "white",
         fontSize: 15,
+        marginBottom: 60,
+    },
+    forgotPasswordText: {
+        color: "white",
+        fontSize: 15,
+        marginTop: 10,
     },
     loginButton: {
         width: "80%",
