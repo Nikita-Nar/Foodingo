@@ -42,6 +42,10 @@ end
 target 'Foodingo' do
   pod 'Firebase/Core', :modular_headers => true
   pod 'GoogleUtilities', :modular_headers => true
+  #Newly Added
+  pod 'GoogleSignIn'
+
+
   use_expo_modules!
   config = use_native_modules!
 
