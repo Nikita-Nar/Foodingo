@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {StyleSheet, Text, View, TextInput, TouchableOpacity, Image, ImageBackground } from 'react-native';
-// import { red900 } from 'react-native-paper/lib/typescript/styles/themes/v2/colors';
 
 const loginlogoImage = require('./assets/images/DingoLogo.jpg');
 
@@ -23,8 +22,8 @@ const LoginPage = ({navigation}) => {
 
     const onPressSignUp = () => {
         //handle sign up 
-        console.log("Sign Up Pressed");
-        navigation.navigate('SignUp') //Create 'Sign Up
+        console.log("Register Pressed");
+        navigation.navigate('Register') //Create 'Sign Up Page'
     }
 
     return (
@@ -78,9 +77,6 @@ const LoginPage = ({navigation}) => {
     )
 
 }
-
-
-
 
 const styles = StyleSheet.create({
 

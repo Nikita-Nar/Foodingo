@@ -4,6 +4,7 @@ import AssessmentScreen from './AssessmentScreen';
 import MiniQuiz from './MiniQuiz';
 import DifficultySelection from './DifficultySelection'
 import LevelMap from './LevelMap';
+import RegisterPage from './Register'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import NavContainer from './NavBarContainer';
@@ -22,6 +23,14 @@ export default function App() {
           component={LoginPage}
           options={{title: 'Login'}}       
         />
+        <Stack.Screen 
+          name="Register"
+          component={RegisterPage}
+          options={{title: 'Register'}}       
+        />
+        
+       
+
         <Stack.Screen
           name="Home"
           component={HomeScreen}
