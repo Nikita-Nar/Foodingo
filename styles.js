@@ -1,4 +1,4 @@
-import {StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
     //in HomeScreen
@@ -107,7 +107,24 @@ const styles = StyleSheet.create({
     checkboxChecked: {
         backgroundColor: '#ff0000',
     },
-    
+    scrollToLevelButton: {
+        flexDirection: 'row', 
+          
+        height: 40,
+        paddingTop: 8,
+        paddingLeft: 55,        
+        
+    },
+    scrollToLevelButtonText: {
+        textTransform: 'uppercase',
+        color: '#f04713',
+        fontFamily: 'Avenir',
+        fontWeight: 'bold',
+        letterSpacing: 3,
+        fontSize: 20,
+        textDecorationLine: 'none', 
+        
+    },
     //in Level Map
     levelNodes : {
         width: 200,
@@ -117,8 +134,9 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         marginBottom: 30,
-        borderColor: 'black',
-        borderWidth: 2,   
+        marginTop: 20,
+        borderColor: 'pink',
+        borderWidth: 5,   
     },
     levelNodes2 : {
         width: 200,
@@ -128,8 +146,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         marginBottom: 30,
-        borderColor: 'black',
-        borderWidth: 2,   
+        borderColor: 'pink',
+        borderWidth: 5,   
     },
     levelNodeText: {
         fontSize: 24,

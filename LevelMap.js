@@ -2,8 +2,16 @@ import {React, useRef, useState, useEffect} from "react";
 import {View, Text, ImageBackground, Image, ScrollView, TouchableOpacity, Button} from "react-native";
 import styles from "./styles";
 
+// Foodingo/assets/images/levelMapBackground.png
+const levelBackGround = require('./assets/images/levelMapBackground.png');
 
-const levelBackGround = require('./assets/bg1.jpg');
+const ScrollToLevelButton = ({title, onPress}) => {
+    return(
+        <TouchableOpacity style={styles.scrollToLevelButton} onPress={onPress}>
+             <Text style ={styles.scrollToLevelButtonText}> {title} </Text>
+        </TouchableOpacity>
+    );
+  };
 
 
 const LevelNode = ({level, onPress}) => (
@@ -77,7 +85,7 @@ const LevelMap = ({route, navigation}) => {
         <ScrollView style={{flex:1}} ref={ref}>
             <ImageBackground source={levelBackGround} style={styles.background}>
                     <View style={{width: "90%", backgroundColor: 'white', marginBottom: 10, marginTop: 10}}>
-                        <Button title="Go To Latest Level" onPress={() => ScrollHandler()}/> 
+                        <ScrollToLevelButton title="Go To Latest Level" onPress={() => ScrollHandler()}/> 
                     </View>
                     <View style={styles.LevelMapContainer} >
                         {levelNodeArr}

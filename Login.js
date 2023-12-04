@@ -24,12 +24,12 @@ const LoginPage = ({navigation}) => {
     const onPressSignUp = () => {
         //handle sign up 
         console.log("Sign Up Pressed");
-        navigation.navigate('SignUp') //Create 'Sign Up Page'
+        navigation.navigate('SignUp') //Create 'Sign Up
     }
 
     return (
     <ImageBackground
-    source = {require('./assets/bg1.jpg')}
+    source = {require('./assets/images/loginBackground.png')}
     style={styles.backgroundImage}
     >
     <Image source={loginlogoImage} style={styles.logInLogo}/>
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     },
     inputView: {
         width: "80%",
-        backgroundColor: "#eab676",
+        backgroundColor: "#FFAF88",
         borderRadius: 25, 
         height: 50,
         marginBottom: 30,
@@ -117,7 +117,6 @@ const styles = StyleSheet.create({
     inputText: {
         height: 50,
         color: "white",
-        
     },
     forgotSignUpText: {
         color: "white",
