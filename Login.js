@@ -75,7 +75,7 @@ const LoginPage = ({navigation}) => {
         </TouchableOpacity>
         <View style={styles.googleButton}>
         <Ionicons name="logo-google" size={24} color="white" />
-        <Text style={{color:Colors.secondary, verticalAlign: 'center', marginTop: 3, marginLeft: 2}}> Sign In with Google </Text>
+        <Text style={{color:Colors.secondary, marginTop: 3, marginLeft: 2}}> Sign In with Google </Text>
        
         </View>
     </View>
