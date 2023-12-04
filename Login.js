@@ -1,5 +1,8 @@
 import React, {useState} from 'react';
-import {StyleSheet, Text, View, TextInput, TouchableOpacity, ImageBackground } from 'react-native';
+import {StyleSheet, Text, View, TextInput, TouchableOpacity, Image, ImageBackground } from 'react-native';
+// import { red900 } from 'react-native-paper/lib/typescript/styles/themes/v2/colors';
+
+const loginlogoImage = require('./assets/images/DingoLogo.jpg');
 
 
 const LoginPage = ({navigation}) => {
@@ -15,10 +18,13 @@ const LoginPage = ({navigation}) => {
     const onPressForgotPassword = () => {
         //handle forgot password pressed
         console.log("Forgot Password Pressed");
+        navigation.navigate('ResetPassword') //Create 'Reset Password Page'
     }
+
     const onPressSignUp = () => {
         //handle sign up 
         console.log("Sign Up Pressed");
+        navigation.navigate('SignUp') //Create 'Sign Up Page'
     }
 
     return (
@@ -26,6 +32,8 @@ const LoginPage = ({navigation}) => {
     source = {require('./assets/bg1.jpg')}
     style={styles.backgroundImage}
     >
+    <Image source={loginlogoImage} style={styles.logInLogo}/>
+    
     <View style={styles.logIncontainer}> 
         <Text style={styles.loginHeader}> Welcome </Text>
 
@@ -80,6 +88,13 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
+    },
+    logInLogo: {
+        width: 100,
+        height: 100, 
+        marginLeft: 160,
+        borderRadius: 150,
+        marginTop: 20,
     },
     loginHeader: {
         // fontWeight: "bold",
