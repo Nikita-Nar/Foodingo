@@ -1,3 +1,4 @@
+
 import {React, useRef, useState, useEffect} from "react";
 import {View, Text, ImageBackground, Image, ScrollView, TouchableOpacity, Button} from "react-native";
 import PointsDisplay from "./PointsDisplay";
@@ -117,4 +118,3 @@ const LevelMap = ({route, navigation}) => {
     );
 };
 
-export default LevelMap; 

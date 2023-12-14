@@ -387,6 +387,13 @@ const styles = StyleSheet.create({
     pointsText: {
         color: 'white',
         fontSize: 15,
+
+        top: 100,
+        right: 10,
+    },
+    pointsText: {
+        fontSize: 24,
+
     },
 });
 

@@ -1,3 +1,4 @@
+
 import { StatusBar } from 'expo-status-bar';
 import { useState,useEffect } from 'react';
 import { View, TouchableOpacity, Text } from 'react-native';
@@ -14,7 +15,6 @@ const FinishRecipeButton = ({title, onPress}) => {
 };
 
 export default function LevelTemplate( {route, navigation} ) {
-  const [points, setPoints] = useState(0); 
   const [meals, setMeals] = useState([]);
   const  [searchQuery, setSearchQuery] = useState('');
   const url ="https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata";
@@ -22,22 +22,20 @@ export default function LevelTemplate( {route, navigation} ) {
   const response = await fetch(url);
   const data = await response.json();
   setMeals(data.meals);
+   
  }
 
- 
   useEffect(()=>{
     getMeals();
   },[])
 
   const pressHandler = () => {
-
     if(route.params.param){
       navigation.navigate('MiniQuiz' , {level: route.params.level, param: true})
     }
     else[
       navigation.navigate('MiniQuiz' , {param: false})
     ]
-
   }
   
   const onChangeSearch = query =>setSearchQuery(query);
@@ -104,4 +102,4 @@ export default function LevelTemplate( {route, navigation} ) {
     displayName: string;
 }
 
-*/
+
